@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twins for Energy Efficiency on Dairy Farms</title>
+    <style>
+        /* Base Reset and Typography */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Layout (Nav & Logos Integrated) */
+        header {
+            background-color: #102C53;
+            color: #FFFFFF;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 20px 0;
+            font-size: 2.2em;
+            font-weight: normal;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Logo Placeholders */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .logo-placeholder {
+            width: 180px;
+            height: 60px;
+            border: 2px dashed #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Links */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Main Content - Centered Horizontally & Vertically */
+        main {
+            flex: 1; /* Pushes footer to the bottom */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Responsive 16:9 Video Container */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1024px; /* Optimal max-width for 1920x1080 source */
+            background-color: #000000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Sticky Footer */
+        footer {
+            background-color: #102C53;
+            min-height: 40px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Digital Twins for Energy Efficiency on Dairy Farms</h1>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-placeholder">Logo 1</div>
+                <div class="logo-placeholder">Logo 2</div>
+            </div>
+            <nav>
+                <a href="architectural_diagram.html">Architectural Diagram</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="installations.html">Installations</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-wrapper">
+            <!-- Standard Vimeo Placeholder Video -->
+            <iframe src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Empty footer to frame the bottom as requested -->
+    </footer>
+
+</body>
+</html>
