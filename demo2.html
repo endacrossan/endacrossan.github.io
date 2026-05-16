@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twins for Energy Efficiency on Dairy Farms</title>
+    <style>
+        /* Base Reset and Typography */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Layout */
+        header {
+            background-color: #102C53;
+            color: #FFFFFF;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 20px 0;
+            font-size: 2.2em;
+            font-weight: normal;
+        }
+
+        /* Navigation Links */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Main Content - Centered Horizontally & Vertically */
+        main {
+            flex: 1; /* Pushes footer to the bottom of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Responsive 16:9 Video Container */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1024px;
+            background-color: #000000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Sticky Footer with Integrated Logos */
+        footer {
+            background-color: #102C53;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 20px 0;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Logo Placeholders in White */
+        .logo-placeholder {
+            width: 180px;
+            height: 60px;
+            border: 2px dashed #FFFFFF;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Digital Twins for Energy Efficiency on Dairy Farms</h1>
+        <nav>
+            <a href="architectural_diagram.html">Architectural Diagram</a>
+            <a href="equipment.html">Equipment</a>
+            <a href="installations.html">Installations</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="video-wrapper">
+            <!-- Standard Vimeo Placeholder Video -->
+            <iframe src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-placeholder">Logo 1</div>
+            <div class="logo-placeholder">Logo 2</div>
+        </div>
+    </footer>
+
+</body>
+</html>
