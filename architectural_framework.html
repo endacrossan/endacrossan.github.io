@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About the Project - Digital Twins for Energy Efficiency</title>
+    <title>Architectural Diagram - Digital Twins for Energy Efficiency</title>
     <style>
         /* Base Reset and Typography */
         html, body {
@@ -100,7 +100,7 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Main Content - About Page Content Layout */
+        /* Main Content - Diagram Page Layout derived exactly from survey.html layout */
         main {
             flex: 1;
             display: flex;
@@ -110,61 +110,46 @@
             padding: 40px 20px;
         }
 
-        .about-container {
+        .survey-container {
             width: 100%;
-            max-width: 850px;
+            max-width: 1024px;
             margin: 0 auto;
-            text-align: left;
         }
 
-        .about-container h2 {
-            color: #102C53;
-            font-size: 1.6em;
-            font-weight: normal;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #102C53;
-            padding-bottom: 5px;
-        }
-
-        .about-container p {
-            font-size: 1.1em;
-            line-height: 1.6;
+        .intro-text {
+            font-size: 1.25em;
             color: #333333;
-            margin-bottom: 20px;
-            text-align: justify;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: normal;
+            border-bottom: 2px solid #102C53;
+            padding-bottom: 15px;
         }
 
-        /* Media and Press Links Styling */
-        .media-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 15px 0 30px 0;
+        /* Diagram Component Layout */
+        .diagram-wrapper {
+            width: 100%;
+            background-color: #FFFFFF;
+            border: 1px solid #EFEFEF;
+            box-shadow: 0 8px 24px rgba(16, 44, 83, 0.08);
+            border-radius: 4px;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
-        .media-item {
-            margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 3px solid #102C53;
-        }
-
-        .media-link {
-            color: #102C53;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s ease;
-        }
-
-        .media-link:hover {
-            color: #1a4073;
-            text-decoration: underline;
-        }
-
-        .media-source {
-            font-size: 0.9em;
-            color: #666666;
+        .architecture-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
             display: block;
-            margin-top: 3px;
+            margin: 0 auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .diagram-wrapper:hover .architecture-image {
+            transform: scale(1.005);
         }
 
         /* Sticky Footer */
@@ -230,9 +215,9 @@
                 font-size: 1.8em;
             }
             
-            .about-container p {
-                font-size: 1.05em;
-                text-align: left;
+            .intro-text {
+                font-size: 1.1em;
+                margin-bottom: 30px;
             }
 
             /* Responsive Footer Rearrangement */
@@ -261,7 +246,7 @@
 <body>
 
     <header>
-        <h1><strong>About: </strong>Digital Twins for Energy Efficiency on Dairy Farms</h1>
+        <h1><strong>Architecture: </strong>Digital Twins for Energy Efficiency on Dairy Farms</h1>
         <p class="subtitle">Improving sustainability in NI's food market</p>
         
         <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdownMenu" onclick="toggleMenu()">
@@ -280,37 +265,12 @@
     </header>
 
     <main>
-        <div class="about-container">
-            <h2>Project Overview</h2>
-            <p>
-                This research project addresses the critical challenge of cost-effectively optimising the balance between scaling renewable energy resources, sizing storage capacity, and managing the precise timing of on-farm energy consumption. Building upon a pilot study funded by AgriSearch in collaboration with Dale Farm, the Ulster Farmers’ Union (UFU), and CAFRE, this PhD research aims to leverage Artificial Intelligence (AI) techniques to mitigate environmental impact. By maximising the utilisation of on-farm renewable generation and intelligently offsetting grid dependency, the framework seeks to minimise the overall kilowatt-hour (kWh) cost per litre of milk produced, thereby enhancing the long-term sustainability and competitiveness of Northern Ireland’s dairy sector.
-            </p>
-
-            <h2>Methodology & Engagement</h2>
-            <p>
-                To construct data-driven, empirical digital twins, the study aims to incorporate comprehensive data collection across both traditional and robotic dairy farm configurations. This system-level modelling relies on high-fidelity operational parameters to simulate and advise on optimal renewable energy configurations. The initial phases of this framework's development have been driven by comprehensive regional data collection, mapping current infrastructure, energy tariffs, and baseline technology adoption across the sector.
-            </p>
-
-            <h2>Acknowledgements</h2>
-            <p>
-                The author gratefully acknowledges the primary project sponsor, AgriSearch, for their invaluable funding, guidance, and ongoing scholarship support. Special thanks are extended to the academic supervisory team at Ulster University for their technical direction and oversight. The author also expresses sincere gratitude to the project partner, Dale Farm, and the six forward-thinking dairy farmers who generously provided operational data access. Finally, appreciation is extended to all regional survey respondents whose participation established the foundational baseline dataset for this research framework.
-            </p>
-
-            <h2>Media Coverage</h2>
-            <ul class="media-list">
-                <li class="media-item">
-                    <a href="https://www.farminglife.com/business/agrisearch-funded-phd-to-focus-on-the-potential-of-using-ai-to-optimise-renewable-energy-generation-and-consumption-on-farm-4800591" class="media-link" target="_blank" rel="noopener noreferrer">
-                        AgriSearch funded PhD to focus on the potential of using AI to optimise renewable energy generation and consumption on-farm
-                    </a>
-                    <span class="media-source">Source: Farming Life</span>
-                </li>
-                <li class="media-item">
-                    <a href="https://www.agriland.ie/farming-news/survey-launched-in-ni-for-renewable-energy-generation-on-dairy-farms/" class="media-link" target="_blank" rel="noopener noreferrer">
-                        Survey launched in NI for renewable energy generation on dairy farms
-                    </a>
-                    <span class="media-source">Source: Agriland</span>
-                </li>
-            </ul>
+        <div class="survey-container">
+            <p class="intro-text">The schematic architecture presented below outlines the integrated technological stack and data flows configured for the deployment of the proposed dairy farm digital twin framework.</p>
+            
+            <div class="diagram-wrapper">
+                <img src="architectural_diagram.svg" alt="Technical architecture map outlining data structures, cloud pipelines, and tech-stack details of the proposed digital twin system framework" class="architecture-image">
+            </div>
         </div>
     </main>
 
