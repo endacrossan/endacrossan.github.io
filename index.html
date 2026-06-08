@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twins for Energy Efficiency on Dairy Farms</title>
+    <style>
+        /* Base Reset and Typography */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Layout */
+        header {
+            background-color: #102C53;
+            color: #FFFFFF;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            padding: 0 50px;
+        }
+
+        header .subtitle {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 100;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            transition: 0.3s;
+        }
+
+        /* Dropdown Navigation */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 20px;
+            background-color: #102C53;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            display: none;
+            flex-direction: column;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            z-index: 99;
+            text-align: left;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+
+        .dropdown-menu a {
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 1.05em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content - Centered with vertical stacking for CTA */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Responsive 16:9 Video Container */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1024px;
+            background-color: #000000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Call to Action Section */
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #102C53;
+            color: #FFFFFF;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #1a4073;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Sticky Footer */
+        footer {
+            background-color: #102C53;
+            color: #FFFFFF;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 20px 0;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Footer Column Structuring */
+        .footer-left, .footer-right {
+            flex: 1;
+            display: flex;
+        }
+
+        .footer-left {
+            justify-content: flex-start;
+        }
+
+        .footer-right {
+            justify-content: flex-end;
+        }
+
+        .footer-center {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-center p {
+            margin: 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+
+        /* Logo Images Styling */
+        .logo-placeholder {
+            width: 160px;
+            height: 55px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Responsive Layout for Smaller Screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            /* Responsive Footer Rearrangement */
+            .footer-content {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                gap: 20px;
+            }
+            .footer-center {
+                order: 1;
+                width: 100%;
+                margin-bottom: 10px;
+                flex: none;
+            }
+            .footer-left {
+                order: 2;
+                flex: initial;
+            }
+            .footer-right {
+                order: 3;
+                flex: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><strong>Demo: </strong>Digital Twins for Energy Efficiency on Dairy Farms</h1>
+        <p class="subtitle">Improving sustainability in NI's food market</p>
+        
+        <!-- Hamburger Menu with ARIA Accessibility -->
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdownMenu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Dropdown Navigation Links -->
+        <nav class="dropdown-menu" id="dropdownMenu" role="menu">
+            <a href="about.html" role="menuitem">about</a>
+            <a href="architectural_diagram.html" role="menuitem">architectural diagram</a>
+            <a href="survey.html" role="menuitem">farm survey results</a>
+            <a href="poster.html" role="menuitem">digital poster</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="video-wrapper">
+            <!-- Standard Vimeo Placeholder Video -->
+            <iframe src="https://player.vimeo.com/video/1199456703?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Digital Twins for Energy Efficiency on Dairy Farms"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <!-- Updated to an accessible image tag -->
+                <img src="logo3.png" alt="Ulster University logo" class="logo-placeholder">
+            </div>
+            
+            <div class="footer-center">
+                <p>Festival of PhD Research 2026</p>
+            </div>
+
+            <div class="footer-right">
+                <!-- Updated to an accessible image tag -->
+                <img src="logo2.svg" alt="AgriSearch logo" class="logo-placeholder">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Toggle visibility class
+            menu.classList.toggle('show');
+            
+            // Update ARIA state
+            const isExpanded = menu.classList.contains('show');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        }
+
+        // Close the dropdown if the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            if (!event.target.closest('.hamburger') && !event.target.closest('.dropdown-menu')) {
+                const dropdowns = document.getElementsByClassName("dropdown-menu");
+                const hamburger = document.querySelector('.hamburger');
+                
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
